@@ -14,4 +14,5 @@
 
 # start the server
 
-mplayer -udp-master -udp-ip 192.168.0.255 -loop 0 /Users/lorenrisker/Movies/video\ art/eyeball-SD-BW-slow.mp4
+nohup mplayer -udp-master -udp-ip 192.168.0.255 -loop 0 /Users/lorenrisker/Movies/video\ art/eyeball-SD-BW-slow-prores.mov &
+

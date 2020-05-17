@@ -14,4 +14,4 @@
 
 # start the client
 
-mplayer -udp-slave -udp-ip 192.168.0.255 -loop 0 ~/movies/eyeball-SD-BW-slow.mp4
+nohup mplayer -udp-slave -udp-ip 192.168.0.255 -loop 0 ~/movies/eyeball-SD-BW-slow.mp4 &
