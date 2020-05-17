@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+# check if mplayer is installed
+# if mplayer is installed, set it to path
+
+/usr/bin/which mplayer
+
+# see if the command was run with a movie path, if so play it
+# if not, ask for a path
+# if no path given, play a default video (maybe oof stream?)
+
+# display requirements and preferred mothods of using
+
+# start the client
+
+mplayer -udp-slave -udp-ip 192.168.0.255 -loop 0 ~/movies/eyeball-SD-BW-slow.mp4
