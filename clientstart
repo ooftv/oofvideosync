@@ -14,4 +14,12 @@
 
 # start the client
 
-nohup mplayer -udp-slave -udp-ip 192.168.0.255 -loop 0 ~/movies/eyeball-SD-BW-slow.mp4 &
+if [ -z "$1" ]
+  then
+    echo you can specify a file to play by running this command with a path
+    echo ex: ./clientstart ~/movies/video_art/eyeball-SD-BW-slow.mp4
+    nohup mplayer -udp-slave -udp-ip 192.168.0.255 -loop 0 ~/movies/video_art/eyeball-SD-BW-slow.mp4 &
+else
+  echo Playing from user input $1
+  nohup mplayer -udp-slave -udp-ip 192.168.0.255 -loop 0 $1 &
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# This script can be run as an interactive way to setup and configure oofvideosync
+# IT will ask if you want to run a server or client
+# And it will see if you want to customize any options
+# If you want to automate this, or run it at startup, just use clientstart and serverstart
