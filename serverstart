@@ -23,5 +23,5 @@ if [ -z "$1" ] #check if run with user input
     nohup mplayer -udp-master -udp-ip 192.168.0.255 -loop 0 /Users/lorenrisker/Movies/video_art/eyeball-SD-BW-slow-prores.mov &
 else
   echo Playing from user input $1
-  nohup mplayer -udp-slave -udp-ip 192.168.0.255 -loop 0 $1 &
+  nohup mplayer -udp-master -udp-ip 192.168.0.255 -loop 0 $1 &
 fi
