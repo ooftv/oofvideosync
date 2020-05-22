@@ -1,6 +1,8 @@
 # oofvideosync
 for syncing video playback on multiple machines on the network
 
+This is a work in progress and as of May 2020 still doesn't work well. Considering to use omxplayer https://github.com/turingmachine/omxplayer-sync but that is not cross platform.
+
 This requires mplayer to run. It doesn't need to compile, it's just a few scripts.
 It should run on any system that has mplayer installed and should play any file mplayer can play.
 
