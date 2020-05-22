@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# brutally kill mplayer no matter what was using it before
+killall mplayer
 
 # check if mplayer is installed
 # if mplayer is installed, set it to path
