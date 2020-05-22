@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo serversync was launched: >> /tmp/clientsync
+date >> /tmp/serversync
+echo =====================
+
 # brutally kill mplayer and omxplayer no matter what was using it before
 killall mplayer
 killall omxplayer
