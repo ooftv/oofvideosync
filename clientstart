@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# brutally kill mplaye rno matter what was using it before
+# brutally kill mplayer or omxplayer no matter what was using it before
 killall mplayer
+killall omxplayer
 
 # check if mplayer is installed
-# if mplayer is installed, set it to path
-
+# if mplayer is installed, set it to path (not written yet)
+/usr/bin/which omxplayer
 /usr/bin/which mplayer
 
 # see if the command was run with a movie path, if so play it
@@ -15,14 +16,16 @@ killall mplayer
 # display requirements and preferred mothods of using
 
 # start the client
-
+# When using omxplayer, go here for more info: https://github.com/turingmachine/omxplayer-sync
 if [ -z "$1" ]
   then
     echo you can specify a file to play by running this command with a path
     echo ex: ./clientstart ~/movies/video_art/eyeball-SD-BW-slow.mp4
-    nohup mplayer -xy 1920 -udp-slave -udp-ip 192.168.0.255 -loop 0 ~/movies/video_art/eyeball-SD-BW-slow.mp4 &
+    nohup omxplayer -o local --loop ~/movies/video_art/eyeball-SD-BW-slow.mp4
+    #nohup mplayer -xy 1920 -udp-slave -udp-ip 192.168.0.255 -loop 0 ~/movies/video_art/eyeball-SD-BW-slow.mp4 &
 else
   echo Playing from user input $1
   nohup mplayer -fs -zoom -udp-slave -udp-ip 192.168.0.255 -loop 0 $1 &
+  nohup omxplayer-sync -luv $1 & # l = slave u = loop v = verbose
 fi
 
